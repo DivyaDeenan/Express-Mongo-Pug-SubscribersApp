@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 Subscriber Details
+	a(href="/") Go Back
+	ul
+		li First Name: #{firstName}
+		li Last Name: #{lastName}
+		li Email: #{email}
+		
+
+	a(class="editsubscriber" href="/editsubscriber/"+_id) Edit
+	| | 
+	a(class="deletesubscriber" href="" data-id=_id) Delete

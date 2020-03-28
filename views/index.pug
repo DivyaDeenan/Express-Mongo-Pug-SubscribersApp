@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1 Subscribers
+	table(border="2px",border-color="yellow")
+		th Email
+		th First Name
+		th Last Name
+		each subscriber, i in subscribers
+			tr 
+				td
+					a(href="/subscriber/"+subscriber._id) #{subscriber.email}
+				td #{subscriber.firstName}
+				td #{subscriber.lastName}
+	a(href='/addsubscriber') Add Subscriber			
